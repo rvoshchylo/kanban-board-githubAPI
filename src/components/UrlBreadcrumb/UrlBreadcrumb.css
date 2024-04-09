@@ -1,0 +1,7 @@
+.custom-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  content: ">";
+}
+
+.custom-breadcrumb .breadcrumb-item a {
+  text-decoration: none;
+}
