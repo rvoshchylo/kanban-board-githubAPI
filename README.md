@@ -2,7 +2,7 @@
 
 This project is a Kanban board that utilizes the GitHub API to retrieve issues from your repository. You can drag and drop issues between the Todo, In Process, and Done columns. Each issue contains information about the user, comments, issue status, opening date, and issue title. All changes are stored in the session storage.
 
-[DEMO](https://kanban-board-github-api.vercel.app/).
+[DEMO](https://kanban-board-github-api.vercel.app/)
 
 ## Technologies Used
 
