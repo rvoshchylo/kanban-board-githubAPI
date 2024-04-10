@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
 import * as RepoSlice from "../../features/repository.slice";
@@ -7,7 +8,7 @@ import { isValidGithubUrl } from "../../utils/isValidGithubUrl";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-export const UrlForm: React.FC = () => {
+const UrlForm: React.FC = () => {
   const [repoUrl, setRepoUrl] = useState<string>("");
   const dispatch = useAppDispatch();
 
@@ -67,3 +68,5 @@ export const UrlForm: React.FC = () => {
     </Form>
   );
 };
+
+export default UrlForm;

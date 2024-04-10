@@ -1,7 +1,7 @@
 import { ToastContainer } from "react-toastify";
-import { KanbanBoard } from "./components/KanbanBoard/KanbanBoard";
-import { UrlBreadcrumb } from "./components/UrlBreadcrumb/UrlBreadcrumb";
-import { UrlForm } from "./components/UrlForm/UrlForm";
+import { KanbanBoard } from "./components/KanbanBoard";
+import { UrlBreadcrumb } from "./components/UrlBreadcrumb";
+import { UrlForm } from "./components/UrlForm";
 import "react-toastify/dist/ReactToastify.css";
 
 export const App: React.FC = () => {

@@ -1,3 +1,4 @@
+import React from "react";
 import { Breadcrumb } from "react-bootstrap";
 import "./UrlBreadcrumb.css";
 import { useAppSelector } from "../../app/hooks";
@@ -6,14 +7,15 @@ import empty_star from "../../assets/empty_star.svg";
 import { capitalize } from "../../utils/capitalize";
 import { countWatchers } from "../../utils/countWatchers";
 
-export const UrlBreadcrumb: React.FC = () => {
+const UrlBreadcrumb: React.FC = () => {
   const repositoryInfo = useAppSelector((state) => state.repo);
   
   const { full_name, watchers_count, owner, html_url } = repositoryInfo?.repository ?? { full_name: "Enter/Repo URL", watchers_count: 0 };
 
   const ownerName = capitalize(full_name.split("/")[0]);
   const repoName = capitalize(full_name.split("/")[1]);
-  const starts = watchers_count > 1 ? "stars" : "star";
+  const watchersCountCheck = watchers_count.toString()[watchers_count.toString().length - 1] !== "1";
+  const starts = watchers_count > 1 && watchersCountCheck ? "stars" : "star";
   const watchersCount = countWatchers(watchers_count);
 
   return (
@@ -39,3 +41,5 @@ export const UrlBreadcrumb: React.FC = () => {
     </div>
   );
 };
+
+export default UrlBreadcrumb;

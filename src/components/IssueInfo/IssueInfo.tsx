@@ -2,7 +2,11 @@ import React from "react";
 import { daysAgo } from "../../utils/countDaysAgo";
 import { IssueNormalized } from "../../types/IssueNormalized";
 
-export const IssueInfo: React.FC<{ issue: IssueNormalized }> = ({ issue }) => {
+interface Props {
+  issue: IssueNormalized;
+}
+
+const IssueInfo: React.FC<Props> = ({ issue }) => {
   const { title, number, user, comments, created_at } = issue;
 
   const days = daysAgo(created_at);
@@ -21,3 +25,5 @@ export const IssueInfo: React.FC<{ issue: IssueNormalized }> = ({ issue }) => {
     </div>
   );
 };
+
+export default IssueInfo;
